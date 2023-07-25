@@ -199,3 +199,24 @@ app_license = "MIT"
 # auth_hooks = [
 #	"bop.auth.validate"
 # ]
+fixtures = [
+        {
+        "dt": "Custom Field",
+        "filters": [
+            [
+                "module", "in", [
+                    "Bank of Punjab",
+                ]
+            ],
+        ]
+
+    },
+    {
+        "dt":"Server Script",
+        "filters":[
+            ["module","in",[
+                "Bank of Punjab"
+            ]]
+        ]
+    }
+]

@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-17 12:09:44.040895",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "against_no_of_days",
+  "markup_rate",
+  "column_break_xnqgj",
+  "remaining_principal_amount",
+  "calculated_markup_amount",
+  "links_section_section",
+  "salary_slip"
+ ],
+ "fields": [
+  {
+   "fieldname": "against_no_of_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Against No of Days"
+  },
+  {
+   "fieldname": "markup_rate",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Markup Rate"
+  },
+  {
+   "fieldname": "column_break_xnqgj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remaining_principal_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Remaining Principal Amount"
+  },
+  {
+   "fieldname": "calculated_markup_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Calculated Markup Amount"
+  },
+  {
+   "fieldname": "links_section_section",
+   "fieldtype": "Section Break",
+   "label": "Links Section"
+  },
+  {
+   "fieldname": "salary_slip",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Salary Slip",
+   "options": "Salary Slip"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-24 11:52:42.809168",
+ "modified_by": "Administrator",
+ "module": "Bank of Punjab",
+ "name": "Accumulated Markup",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

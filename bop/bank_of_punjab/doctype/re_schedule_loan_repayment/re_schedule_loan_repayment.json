@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-24 12:50:21.763908",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date_of_repayment",
+  "section_break_hywno",
+  "re_schedule_loan_repayment_table"
+ ],
+ "fields": [
+  {
+   "fieldname": "re_schedule_loan_repayment_table",
+   "fieldtype": "Table",
+   "label": "Re Schedule Loan Repayment Table",
+   "options": "Re Schedule Loan Repayment Table"
+  },
+  {
+   "description": "will be used to fetch month of the repayment",
+   "fieldname": "date_of_repayment",
+   "fieldtype": "Date",
+   "label": "Date of Repayment"
+  },
+  {
+   "fieldname": "section_break_hywno",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-07-24 16:35:34.190855",
+ "modified_by": "Administrator",
+ "module": "Bank of Punjab",
+ "name": "Re Schedule Loan Repayment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

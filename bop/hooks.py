@@ -98,6 +98,10 @@ app_license = "MIT"
 #	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
+override_doctype_class = {
+	"Employee": "bop.custom.custom_employee.customEmployee"
+}
+
 # Document Events
 # ---------------
 # Hook on document methods and events
@@ -113,23 +117,28 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-#	"all": [
-#		"bop.tasks.all"
-#	],
-#	"daily": [
-#		"bop.tasks.daily"
-#	],
-#	"hourly": [
-#		"bop.tasks.hourly"
-#	],
-#	"weekly": [
-#		"bop.tasks.weekly"
-#	],
-#	"monthly": [
-#		"bop.tasks.monthly"
-#	],
-# }
+scheduler_events = {
+    "cron": {
+		"10 0 * * *": [
+			"bop.update_daily_markup"
+		]
+	},
+	# "all": [
+	# 	"bop.tasks.all"
+	# ],
+	# "daily": [
+	# 	"bop.tasks.daily"
+	# ],
+	# "hourly": [
+	# 	"bop.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"bop.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"bop.tasks.monthly"
+	# ],
+}
 
 # Testing
 # -------

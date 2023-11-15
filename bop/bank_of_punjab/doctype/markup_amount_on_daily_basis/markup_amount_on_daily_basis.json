@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{against_loan}-{month}",
+ "creation": "2023-08-15 18:31:07.952466",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "against_loan",
+  "loan_application",
+  "column_break_3",
+  "company",
+  "posting_date",
+  "section_break_6",
+  "month",
+  "column_break_8",
+  "month_start_date",
+  "month_end_date",
+  "section_break_10",
+  "day_wise_markup_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "against_loan",
+   "fieldtype": "Link",
+   "label": "Against Loan",
+   "options": "Loan"
+  },
+  {
+   "fieldname": "loan_application",
+   "fieldtype": "Link",
+   "label": "Loan Application",
+   "options": "Loan Application"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Data",
+   "label": "Month"
+  },
+  {
+   "fieldname": "month_start_date",
+   "fieldtype": "Date",
+   "label": "Month Start Date"
+  },
+  {
+   "fieldname": "month_end_date",
+   "fieldtype": "Date",
+   "label": "Month End Date"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "day_wise_markup_details",
+   "fieldtype": "Table",
+   "label": "Day Wise Markup Details",
+   "options": "Daily Basis Markup Item"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-08-15 18:44:58.955811",
+ "modified_by": "Administrator",
+ "module": "Bank of Punjab",
+ "name": "Markup Amount On Daily Basis",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

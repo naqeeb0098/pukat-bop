@@ -5,6 +5,35 @@ class customEmployee(Employee):
     def validate(self):
         super().validate()
         self.name = self.old_no
+        self.assign_position_based_roles()
+
+    def assign_position_based_roles(self):
+        if self.position or self.additional_position_1 or self.additional_position_2 or self.additional_position_3:
+            positions = [self.position, self.additional_position_1, self.additional_position_2, self.additional_position_3]
+            role_list = []
+            for position in positions:
+                if position:  # Check if position is not None or empty
+                    role_to_be_assigned = frappe.db.get_value("Position", position, "role")
+                    if role_to_be_assigned and role_to_be_assigned not in role_list:
+                        role_list.append(role_to_be_assigned)
+
+            roles_to_be_removed = frappe.db.get_all("Position","role",pluck="role")
+            if self.user_id:
+                user_doc = frappe.get_doc("User", self.user_id)
+                existing_roles = [d.role for d in user_doc.roles]
+
+                # Remove roles that are not in role_list, except for 'Employee'
+                for role in existing_roles:
+                    if role in roles_to_be_removed and role not in role_list and role != "Employee":
+                        user_doc.remove_roles(role)
+
+                # Add new roles from role_list
+                for role in role_list:
+                    if role not in existing_roles:
+                        user_doc.append('roles', {'role': role})
+
+                user_doc.save()
+
 
 
 @frappe.whitelist(allow_guest=True)
